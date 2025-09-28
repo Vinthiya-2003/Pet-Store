@@ -1,0 +1,27 @@
+{% extends "pet/base.html" %}
+{% block content %}
+{% load static %}
+<div class="container mt-4">
+  <nav style="font-size:13px;">
+    Home / Dog / Turkey, Chickpea & Sweet Potato | Small Breed 2kg / cart / Checkout / <b>Order Completion</b>
+  </nav>
+  <div class="d-flex justify-content-center align-items-center" style="min-height:70vh;">
+    <div style="background:#aef7ae; border-radius:16px; max-width:430px; width:100%; padding:32px 24px; box-shadow:0 0 18px #eee;">
+      <h4 class="mb-3 text-center fw-bold">Thank you for your purchase!</h4>
+      <p class="text-center mb-3" style="font-size:15px;">
+        Your order will be processed within 24 hours during working days. We will notify you by email once your order has been shipped.
+      </p>
+      <div class="mb-3">
+        <b>Billing address</b><br>
+        Name: Priya<br>
+        Address: 23/56, east street, chennai 627800<br>
+        Phone: 1234567890<br>
+        Email: name1@gmail.com
+      </div>
+      <div class="text-center">
+        <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Back</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

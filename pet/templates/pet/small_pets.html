@@ -1,0 +1,196 @@
+{% extends "pet/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container my-4">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Small pets</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-md-3">
+      <button class="btn btn-outline-secondary w-100 mb-3">
+        <i class="bi bi-funnel"></i> Filters
+      </button>
+
+      <h5 class="fw-bold mb-3">Top Deals</h5>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod1.png' %}" class="rounded me-2"> Hamsters <br>
+          <small>Food and box</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod2.png' %}" class="rounded me-2"> Rabbits <br>
+          <small>Foods and box</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod3.png' %}" class="rounded me-2"> Rat <br>
+          <small>Rats foods are available</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod4.png' %}" class="rounded me-2"> Fish <br>
+          <small>All types of fish food</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod5.png' %}" class="rounded me-2"> Guinea pigs <br>
+          <small>Guinea pig food & bottle</small>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-9">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="fw-bold">Small animals</h4>
+        <select class="form-select w-auto">
+          <option>Sort by</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Rating</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z1.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Chipsi Sunshine Hay For Small Pets</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 495 <small class="text-muted">1 kg</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z2.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Chipsi Classic Small Animal Litter</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 340 <small class="text-muted">1 kg</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z3.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Trixie Pico Transport Box</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 1,350 <small class="text-muted">Small</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z4.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Vitapol Economic Food For Guinea Pigs</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 525 <small class="text-muted">1.2 kg</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z5.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Vitapol Economic Food for Rabbits</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 500 <small class="text-muted">1.2 kg</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z6.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Vitapol Economic Food For Cockatiel</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 580 <small class="text-muted">1.2 kg</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z7.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Vitapol Economic Food For Hamster</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 485 <small class="text-muted">1.2 kg</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z8.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Me-O Delite Cat Food Tuna With Cheese</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 397 <small class="text-muted">397 g</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'images/z9.png' %}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title">Trixie Water Bottle For Guinea Pigs</h6>
+              <p class="text-warning mb-1">★★★★☆ (453)</p>
+              <p class="fw-bold">₹ 225 <small class="text-muted">250 ml</small></p>
+              <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">9</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

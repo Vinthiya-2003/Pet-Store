@@ -1,0 +1,196 @@
+{% extends 'pet/base.html' %}
+{% load static %}
+{% block title %}Home - Pet Store{% endblock %}
+{% block content %}
+
+<!-- Banner Section -->
+<div class="container-fluid p-0">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <img src="{% static 'images/dog-raincoat.png' %}" class="img-fluid w-100" alt="Dog in Raincoat">
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center bg-success text-white p-5">
+      <div class="text-center">
+        <h2>Monsoon Edition for Dogs</h2>
+        <p>100% Water Proof</p>
+        <a href="#" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Shop by Pet -->
+<div class="container text-center my-5">
+  <h3 class="mb-4">Shop by Pet</h3>
+  <div class="d-flex justify-content-center gap-2 flex-wrap">
+    <div>
+      <div class="bg-success rounded-circle p-4">
+        <img src="{% static 'images/dog.png' %}" class="img-fluid" alt="Dog">
+      </div>
+      <p class="mt-2">Dog</p>
+    </div>
+    <div>
+      <div class="bg-success rounded-circle p-4">
+        <img src="{% static 'images/cat.png' %}" class="img-fluid" alt="Cat">
+      </div>
+      <p class="mt-2">Cat</p>
+    </div>
+    <div>
+      <div class="bg-success rounded-circle p-4">
+        <img src="{% static 'images/hamsters.png' %}" class="img-fluid" alt="Hamsters">
+      </div>
+      <p class="mt-2">Hamsters</p>
+    </div>
+    <div>
+      <div class="bg-success rounded-circle p-3">
+        <img src="{% static 'images/cat.png' %}" class="img-fluid" alt="Guinea pigs">
+      </div>
+      <p class="mt-2">Guinea pigs</p>
+    </div>
+    <div>
+      <div class="bg-success rounded-circle p-4">
+        <img src="{% static 'images/fish.png' %}" class="img-fluid" alt="Fish">
+      </div>
+      <p class="mt-2">Fish</p>
+    </div>
+  </div>
+</div>
+
+<!-- Top Rated Products -->
+<div class="container my-5">
+  <h3 class="mb-4 text-center">Top Rated Calming Products</h3>
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'images/prod1.png' %}" class="card-img-top" alt="Stress Free Summer">
+        <div class="card-body">
+          <h6>Stress-Free Summer</h6>
+          <p class="small text-muted">Keep your pup calm along all season</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'images/prod2.png' %}" class="card-img-top" alt="Native Pet">
+        <div class="card-body">
+          <h6>Native Pet Calming Chews</h6>
+          <p class="small">₹ 299</p>
+          ⭐⭐⭐⭐☆
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'images/prod3.png' %}" class="card-img-top" alt="Zesty Paws">
+        <div class="card-body">
+          <h6>Zesty Paws Advanced Calming Bites</h6>
+          <p class="small">₹ 309</p>
+          ⭐⭐⭐⭐☆
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'images/prod4.png' %}" class="card-img-top" alt="VetIQ Calming">
+        <div class="card-body">
+          <h6>VetIQ Calming - 60 Count</h6>
+          <p class="small">₹ 459</p>
+          ⭐⭐⭐⭐☆
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'images/prod5.png' %}" class="card-img-top" alt="Pet Honesty Hemp Calming">
+        <div class="card-body">
+          <h6>Pet Honesty Hemp Calming Soft Chews</h6>
+          <p class="small">₹ 599</p>
+          ⭐⭐⭐⭐☆
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Offer Banner -->
+<div class="row bg-primary text-white p-4 rounded mb-4 align-items-center">
+  <div class="col-md-8">
+    <h4>Store - Door savings with Autoship.</h4>
+    <p>SAVE 35% on first order plus stack limited-time deals on top Autoship items, see terms</p>
+    <a href="#" class="btn btn-light">Shop & Save</a>
+  </div>
+  <div class="col-md-4 text-center">
+    <span class="badge bg-warning text-dark fs-5">Save 35%</span>
+  </div>
+</div>
+
+<!-- Product Offer -->
+<div class="row bg-success bg-opacity-25 p-4 rounded mb-4 align-items-center">
+  <div class="col-md-8">
+    <h5>Buy 1 Blue Wilderness Dry Dog Food (13-28 lbs), get 2 free Wild Cut Toppers*</h5>
+  </div>
+  <div class="col-md-4 text-center">
+    <a href="#" class="btn btn-primary">Shop Now</a>
+  </div>
+</div>
+
+<!-- Services Section -->
+<h3 class="text-center mb-4">Pet Services</h3>
+<p class="text-center text-muted">Treats Rewards members earn points on every service</p>
+
+<div class="row text-center g-4">
+
+  <!-- Grooming -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'images/prod6.png' %}" class="card-img-top" alt="Grooming">
+      <div class="card-body">
+        <h5 class="card-title">Grooming</h5>
+        <p class="card-text">Summer Salon Special – Bandana, toy & more plus 2X points</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Training -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'images/prod7.png' %}" class="card-img-top" alt="Training">
+      <div class="card-body">
+        <h5 class="card-title">Training</h5>
+        <p class="card-text">Any 6-wk. Training Class ONLY $129 (that’s $21.50 a week)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Petshotel -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'images/prod8.png' %}" class="card-img-top" alt="Petshotel">
+      <div class="card-body">
+        <h5 class="card-title">Petshotel</h5>
+        <p class="card-text">Stay 4 nights, get the 5th night FREE</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day Camp -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'images/prod9.png' %}"class="card-img-top" alt="Day Camp">
+      <div class="card-body">
+        <h5 class="card-title">Diggy Day Camp</h5>
+        <p class="card-text">New Camper Special – SAVE 50% on 1st day of play</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

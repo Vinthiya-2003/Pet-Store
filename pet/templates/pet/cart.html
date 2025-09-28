@@ -1,0 +1,91 @@
+{% extends "pet/base.html" %}
+{% block content %}
+{% load static %}
+<div class="container mt-4">
+  <nav style="font-size:13px;">Home / Dog / Turkey, Chickpea & Sweet Potato | Small Breed 2kg / cart</nav>
+  <div class="row mt-3">
+    <div class="col-md-8">
+      <div class="card mb-3">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Remove</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button class="btn btn-link text-danger">X</button></td>
+                <td>
+                  <img src="{% static 'images/prod2.png' %}" style="width:60px;height:60px;border-radius:6px;object-fit:cover;" class="mb-1"/>
+                  <div><b>Turkey, Chickpea & Sweet Potato Small Breed 2kg</b></div>
+                </td>
+                <td>₹1,899</td>
+                <td>
+                  <div class="input-group" style="width:100px;">
+                    <button class="btn btn-outline-secondary btn-sm">-</button>
+                    <input type="text" value="1" class="form-control text-center" style="height:32px;"/>
+                    <button class="btn btn-outline-secondary btn-sm">+</button>
+                  </div>
+                </td>
+                <td>₹1,899</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="input-group mb-3" style="max-width:280px;">
+        <input type="text" class="form-control" placeholder="Coupon code">
+        <button class="btn btn-primary" type="button">Apply coupon</button>
+      </div>
+      <div class="row g-2 mb-3">
+        <div class="col-md-4"><div class="bg-success text-white text-center p-2 rounded">Free products<br>dog food combo 5 kg, turkey</div></div>
+        <div class="col-md-4"><div class="bg-success text-white text-center p-2 rounded">Free products<br>dog food 2 kg turkey</div></div>
+        <div class="col-md-4"><div class="bg-success text-white text-center p-2 rounded">Free products<br>dog food 2 kg chicken</div></div>
+      </div>
+      <div class="d-flex justify-content-start mb-2">
+        <div class="pe-4"><small><i class="bi bi-telephone"></i> <b>Have a question?</b><br>Our experts are here to call: <a href="#">call us</a></small></div>
+        <div class="pe-4"><small><i class="bi bi-shield-check"></i> <b>Secure shopping</b><br>All transactions are protected by SSL</small></div>
+        <div><small><i class="bi bi-shield-lock"></i> <b>Privacy protection</b><br>Your privacy is always our top priority.</small></div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 mb-3">
+        <h5>Card Totals</h5>
+        <table class="table table-borderless mb-0">
+          <tr>
+            <td>Sub total</td>
+            <td class="text-end">₹1,899</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td class="text-end"><span class="text-decoration-line-through text-secondary">Flat rate: 99.00</span></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td class="text-end fw-bold">₹1,899</td>
+          </tr>
+        </table>
+        <a href="{% url 'checkout' %}" class="btn btn-primary w-100 mt-2 btn-lg">Proceed to Checkout</a>
+      </div>
+      <div class="mb-2">
+        <b>Payment methods</b><br>
+        <img src="https://img.icons8.com/color/48/000000/google-pay-india.png" width="32"/>
+        <img src="https://img.icons8.com/color/48/000000/upi.png" width="32"/>
+        <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" width="32"/>
+        <img src="https://img.icons8.com/color/48/000000/visa.png" width="32"/>
+      </div>
+      <div><small>
+        <b>Delivery Information:</b><br>
+        Although we don't think you'll ever want one, we'll gladly provide a refund if it's requested within 14 days of purchase.<br>
+        <b>14 Days Money Back Guarantee:</b> Although we don't think you'll ever want one, we'll gladly provide a refund if it's requested within 14 days of purchase.
+      </small></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

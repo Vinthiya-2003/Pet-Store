@@ -1,0 +1,147 @@
+{% extends 'pet/base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consult Vet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style>
+        .service-icon { width: 48px; height: 48px; }
+        .service-title { font-size: 0.98rem; margin-top: 7px; }
+        .vet-card img { width: 60px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home / Consult Vet</a>
+        </div>
+    </nav>
+    <!-- Top Banner -->
+    <div class="container-fluid px-0">
+        <div class="card border-0 rounded-0 mb-3" style="background: #f1f2fe;">
+            <div class="row">
+                <div class="col-md-8 align-items-center d-flex">
+                    <img src="{% static 'images/prod14.png' %}" class="img-fluid" alt="Vet Consultation">
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-center align-items-start p-4">
+                    <h5>Instant and complete vet care</h5>
+                    <p class="mb-2" style="font-size: 0.97rem;">
+                        Wherever you are. At only 299, get end-to-end support from our vets.
+                    </p>
+                    <a href="#" class="btn btn-primary">Consult Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Bar -->
+    <div class="container-fluid bg-primary text-white py-2 mb-3">
+        <div class="row text-center">
+            <div class="col">Verified Doctors</div>
+            <div class="col">Free follow-up</div>
+            <div class="col">Medicine delivery</div>
+        </div>
+    </div>
+    <!-- Service Categories -->
+    <div class="container text-center mb-4">
+        <div class="row justify-content-center">
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 1.png' %}" class="service-icon">
+                <div class="service-title">General Checkup</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 2.png' %}" class="service-icon">
+                <div class="service-title">Skin issues</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 3.png' %}" class="service-icon">
+                <div class="service-title">Digestive issues</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 4.png' %}" class="service-icon">
+                <div class="service-title">Paws & Limbs</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 5.png' %}" class="service-icon">
+                <div class="service-title">Dental issues</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 5.png' %}" class="service-icon">
+                <div class="service-title">Ear issues</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 7.png' %}" class="service-icon">
+                <div class="service-title">Eye issues</div>
+            </div>
+            <div class="col-auto mx-2">
+                <img src="{% static 'images/image 8.png' %}" class="service-icon">
+                <div class="service-title">Nutrition</div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content Block -->
+    <div class="container mb-4">
+        
+        <!-- Page-specific content goes here -->
+        
+    </div>
+    <!-- Stress Free Pet Care Section -->
+    <div class="container-fluid py-4" style="background-color: #b9ffd1;">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6">
+                <div class="card shadow-sm">
+                    <img src="{% static 'images/prod15.png' %}" class="card-img-top" alt="Pet Care">
+                </div>
+                <div class="text-center my-3">
+                    Get Stress-Free Pet Care from the comfort of your home
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary">Consult Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expert Vets Section -->
+    <div class="container py-5">
+        <h5 class="text-center mb-4">Access our expert vets from anywhere</h5>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+                <div class="card vet-card text-center p-3">
+                    <img src="{% static 'images/d1.png' %}" class="rounded-circle mx-auto" alt="Dr. A">
+                    <div class="mt-2">
+                        <b>Dr. Ashitha Suresh</b>
+                        <div>Gynaecology & Obstetrics | 6+ Years</div>
+                        <div>Veterinarian, MVSc PhD</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card vet-card text-center p-3">
+                    <img src="{% static 'images/d2.png' %}" class="rounded-circle mx-auto" alt="Dr. B">
+                    <div class="mt-2">
+                        <b>Dr. Rashmi S</b>
+                        <div>Gynaecology & Obstetrics | 6+ Years</div>
+                        <div>MVSc PhD</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card vet-card text-center p-3">
+                    <img src="{% static 'images/d3.png' %}" class="rounded-circle mx-auto" alt="Dr. C">
+                    <div class="mt-2">
+                        <b>Dr. Anu CS</b>
+                        <div>General Medicine | 13+ Years</div>
+                        <div>Associate Veterinarian, MVSc PhD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends "pet/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container my-4">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Dogs</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-md-3">
+      <button class="btn btn-outline-secondary w-100 mb-3">
+        <i class="bi bi-funnel"></i> Filters
+      </button>
+
+      <h5 class="fw-bold mb-3">Top Deals</h5>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod1.png' %}" class="rounded me-2"> Hamsters <br>
+          <small>Food and box</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod2.png' %}" class="rounded me-2"> Rabbits <br>
+          <small>Foods and box</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod3.png' %}" class="rounded me-2"> Rat <br>
+          <small>Rats foods are available</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod4.png' %}" class="rounded me-2"> Fish <br>
+          <small>All types of fish food</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <img src="{% static 'images/prod5.png' %}" class="rounded me-2"> Guinea pigs <br>
+          <small>Guinea pig food & bottle</small>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-9">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="fw-bold">Dogs</h4>
+        <select class="form-select w-auto">
+          <option>Sort by</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Rating</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Card 1 -->
+         <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z1.png' %}" class="card-img-top" alt="hi">
+          <div class="card-body">
+            <h6 class="card-title">Turkey, Chickpea & Sweet Potato Small Breed 2Kg</h6>
+            <p class="text-muted mb-1">2 kg</p>
+            <p class="fw-bold">₹ 1,899</p>
+            <a href="{% url 'cart' %}" class="btn btn-primary w-100">Add to Cart</a>
+             
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z2.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Cuddle Adult Dog Wet foods</h6>
+            <p class="text-muted mb-1">100 g</p>
+            <p class="fw-bold">₹ 40</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z3.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Kennel Kitchen Dry Dog Food Chicken Recipe</h6>
+            <p class="text-muted mb-1">2 kg</p>
+            <p class="fw-bold">₹ 399</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z4.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Drools Dog Spike Hard Ball Toy 3 inch</h6>
+            <p class="text-muted mb-1">3 inch</p>
+            <p class="fw-bold">₹ 160</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z5.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Drools Puppy Dog Food Chicken and Egg Flavor 1.2Kg</h6>
+            <p class="text-muted mb-1">1.2 kg</p>
+            <p class="fw-bold">₹ 250</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z6.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Pedigree Adult & Puppy Dry Dog Food 100% Vegetarian</h6>
+            <p class="text-muted mb-1">1 kg</p>
+            <p class="fw-bold">₹ 334</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z7.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Canine Creek Real Chicken in Gravy 150GM</h6>
+            <p class="text-muted mb-1">150 g</p>
+            <p class="fw-bold">₹ 35</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z8.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Himalaya Digestive Stimulant Digyton Drops for Dogs and Cats</h6>
+            <p class="text-muted mb-1">100 ml</p>
+            <p class="fw-bold">₹ 165</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'images/z9.png' %}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h6 class="card-title">Pedigree Pro Adult Small Breed</h6>
+            <p class="text-muted mb-1">3 kg</p>
+            <p class="fw-bold">₹ 1,100</p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+       
+</div>
+<!-- Pagination -->
+      <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">9</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+      

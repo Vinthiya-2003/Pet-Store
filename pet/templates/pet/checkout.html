@@ -1,0 +1,104 @@
+{% extends "pet/base.html" %}
+{% block content %}
+{% load static %}
+<div class="container mt-4">
+  <nav style="font-size:13px;">Home / Dog / Turkey, Chickpea & Sweet Potato | Small Breed 2kg / cart / <b>Checkout</b></nav>
+  <h3 class="mt-2 mb-4 text-center">Checkout</h3>
+  <div class="row">
+    <!-- LEFT SIDE FORM -->
+    <div class="col-md-7">
+      <form method="post" action="{% url 'back' %}">
+        {% csrf_token %}
+        <!-- Contact -->
+        <div class="mb-3">
+          <label class="form-label"><b>Contact</b></label>
+          <input type="email" class="form-control mb-2" placeholder="Email (for order updates)" required/>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="emailUpdates">
+            <label class="form-check-label" for="emailUpdates">
+              Send me order updates, news and offers on Email and WhatsApp
+            </label>
+          </div>
+        </div>
+        <!-- Delivery -->
+        <div class="mb-3">
+          <label class="form-label"><b>Delivery</b></label>
+          <input class="form-control mb-2" placeholder="Country/Region" required/>
+          <div class="row mb-2">
+            <div class="col"><input class="form-control" placeholder="First name" required/></div>
+            <div class="col"><input class="form-control" placeholder="Last name" required/></div>
+          </div>
+          <input class="form-control mb-2" placeholder="Address" required/>
+          <input class="form-control mb-2" placeholder="Apartment, suite (Optional)"/>
+          <div class="row mb-2">
+            <div class="col"><input class="form-control" placeholder="City" required/></div>
+            <div class="col"><input class="form-control" placeholder="State" required/></div>
+            <div class="col"><input class="form-control" placeholder="Pincode" required/></div>
+          </div>
+          <input class="form-control mb-2" placeholder="Phone" required/>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="saveInfo">
+            <label class="form-check-label" for="saveInfo">
+              Save this information for next time
+            </label>
+          </div>
+        </div>
+        <!-- Payment Method -->
+        <div class="mb-4">
+          <label class="form-label"><b>Choose your payment method</b></label>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="payment" id="securePay" checked>
+            <label class="form-check-label" for="securePay">
+              Secure transaction (UPI, Cards, Wallets, Net banking)
+              <img src="https://img.icons8.com/color/48/000000/google-pay-india.png" width="28"/>
+              <img src="https://img.icons8.com/color/48/000000/upi.png" width="28"/>
+              <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" width="28"/>
+              <img src="https://img.icons8.com/color/48/000000/visa.png" width="28"/>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="cod">
+            <label class="form-check-label" for="cod">Cash on Delivery</label>
+          </div>
+        </div>
+        <!-- Order Now -->
+          <a href="{% url 'back' %}" class="btn btn-primary w-100 btn-lg">Order Now</a>
+         >
+      </form>
+    </div>
+    <!-- RIGHT SIDE SUMMARY -->
+    <div class="col-md-5">
+      <div class="p-3" style="background-color:#aef7ae; border-radius:10px;">
+        <h5>Order summary</h5>
+        <div class="d-flex align-items-center mb-2">
+          <img src="{% static 'images/prod2.png' %}" style="width:60px;height:80px;border-radius:6px;object-fit:cover;" class="me-2"/>
+          <div>
+            <div class="fw-bold">Turkey, Chickpea & Sweet Potato Small Breed 2kg</div>
+            <div class="small">MRP: ₹1,899</div>
+            <div class="small">Quantity: 1<br>Size: 1kg</div>
+          </div>
+        </div>
+        <div class="input-group mb-1">
+          <input type="text" class="form-control" placeholder="Discount code or gift card">
+          <button type="button" class="btn btn-primary">Apply</button>
+        </div>
+        <table class="table mb-2 bg-white" style="border-radius:6px;">
+          <tr>
+            <td class="border-0">Sub total</td>
+            <td class="border-0 text-end">₹1,899</td>
+          </tr>
+          <tr>
+            <td class="border-0">Shipping</td>
+            <td class="border-0 text-end"><span class="text-decoration-line-through text-secondary">Flat rate: ₹99.00</span></td>
+          </tr>
+          <tr>
+            <td class="border-0 text-success fw-bold">Total</td>
+            <td class="border-0 text-success fw-bold">₹1,899</td>
+          </tr>
+        </table>
+        <small class="text-secondary">*Includes ₹99.00 GST. 123456 CARTI</small>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

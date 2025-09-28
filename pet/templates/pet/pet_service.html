@@ -1,0 +1,135 @@
+{% extends 'pet/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Banner -->
+<div class="container-fluid p-0">
+    <img src="{% static 'images/dog-raincoat.png' %}" alt="PetPalooza Banner" class="img-fluid w-100" style="max-height:260px;object-fit:cover;">
+    <!-- Logo overlay -->
+    
+</div>
+
+<!-- Service Cards Row -->
+<div class="container my-4">
+    <div class="d-flex justify-content-center">
+        <div class="bg-white rounded shadow-lg p-3" style="min-width:650px;">
+            <div class="row justify-content-center gx-3">
+                <div class="col-auto">
+                    <div class="card border-0 text-center" style="background:#C8FFDC;width:115px;">
+                        <div class="card-body pb-1 pt-2">
+                            <span class="fs-1">&#128705;</span>
+                            <div>Grooming</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card border-0 text-center" style="background:#C8FFDC;width:115px;">
+                        <div class="card-body pb-1 pt-2">
+                            <span class="fs-1">&#127968;</span>
+                            <div>PetsHotel</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card border-0 text-center" style="background:#C8FFDC;width:115px;">
+                        <div class="card-body pb-1 pt-2">
+                            <span class="fs-1">&#128054;</span>
+                            <div>Doggie Day Camp</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card border-0 text-center" style="background:#C8FFDC;width:115px;">
+                        <div class="card-body pb-1 pt-2">
+                            <span class="fs-1">&#128218;</span>
+                            <div>Training</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card border-0 text-center" style="background:#C8FFDC;width:115px;">
+                        <div class="card-body pb-1 pt-2">
+                            <span class="fs-1">&#128137;</span>
+                            <div>Veterinary Care</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card border-0 text-center" style="background:#C8FFDC;width:115px;">
+                        <div class="card-body pb-1 pt-2">
+                            <span class="fs-1">&#128054;</span>
+                            <div>Adoption</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pet Services intro -->
+<div class="container mb-3">
+    <div class="row">
+        <div class="col">
+            <h4 class="mb-2">Pet Services</h4>
+            <p class="mb-0">Whether it’s a pamper day, playdate, sleepover, training class or veterinary visit, we provide the best in pet services with highly trained, passionate associates from our PetPalooza crew...</p>
+        </div>
+        <div class="col-auto d-none d-md-block align-self-center text-end">
+            <a href="tel:+911234567890" class="text-primary small">customer service<br>+91-1234567890</a>
+        </div>
+    </div>
+</div>
+
+<!-- Summer & Monthly Specials -->
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card bg-primary text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Summer Special</h5>
+                    <p class="card-text">Upgrade a salon visit or overnight stay with a strawberry ice-cream treat, $30+ in coupon savings & more.</p>
+                    <a href="#" class="btn btn-light">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-success bg-opacity-25 mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Monthly specials</h5>
+                    <p class="card-text">Check out deals, offers & events in grooming, boarding, day camp & training.</p>
+                    <a href="#" class="btn btn-primary">Get Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3 Info Boxes -->
+<div class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="col">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <p class="card-text mb-3">Yappy Hour<br> $5 OFF on salon walk-in services Monday Thru Friday</p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <p class="card-text mb-3">ONLY $129 any 6-wk Training Class<br> (that's $21.50 a class) valid thru 7/6</p>
+                    <a href="#" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <p class="card-text mb-3">Traveling without your pet this summer? Suite upgrades and fun add-ons make their stays special.</p>
+                    <a href="#" class="btn btn-primary">Book Stay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

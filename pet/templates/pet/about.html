@@ -1,0 +1,89 @@
+{% extends "pet/base.html" %}
+
+{% block title %}About Us - Petpalooza{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<!-- Hero Section -->
+<div class="text-center mb-4">
+  <img src="{% static 'images/prod10.png' %}" class="img-fluid rounded shadow" alt="Family with Pet">
+  <div class="position-absolute top-50 start-50 translate-middle bg-dark text-white p-3 rounded shadow">
+    <h3 class="fw-bold">Our Mission</h3>
+    <p class="mb-0">
+      Every day with every connection, Petpalooza passionate associates help bring pet parents closer 
+      to their pets so they can live more fulfilled life
+    </p>
+  </div>
+</div>
+
+<!-- Anything for Pets -->
+<div class="p-4 mb-4 rounded" style="background-color:#aef0ae;">
+  <h5 class="fw-bold text-center">ANYTHING for PETS®</h5>
+  <p class="text-dark">
+    We love pets, and we believe loving pets makes us better people. That’s one of the many reasons 
+    we do Anything for Pets – because they will do anything for us. Anything for Pets is our commitment 
+    to pet parents, it’s how we do business and who we are as pet lovers.
+  </p>
+  <p class="text-dark">
+    From dressing in matching costumes, to finding the perfect treats and toys, we innovate solutions 
+    and unique, must-have products to create more ways for pets to be a part of our everyday lives. 
+    Our trusted and skilled associates share the same passion for pets as the pet parents we serve, 
+    helping pet parents choose from our offering of the largest variety of pet products and services 
+    in one convenient place – in your neighborhood or the palm of your hand.
+  </p>
+  <p class="text-dark">
+    With more than 1,660 locations in North America, we pride ourselves on our unrivaled variety 
+    of pet food, treats, toys, and apparel, as well as our services including training, grooming, 
+    boarding and more.
+  </p>
+</div>
+
+<!-- Cards Section -->
+<div class="row text-center mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card shadow-sm h-100">
+      <img src="{% static 'images/prod11.png' %}" class="card-img-top" alt="Our Story">
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">Our story</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card shadow-sm h-100">
+      <img src="{% static 'images/prod12.png' %}" class="card-img-top" alt="Media resources">
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">Media resources</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card shadow-sm h-100">
+      <img src="{% static 'images/prod13.png' %}" class="card-img-top" alt="Charities">
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">Charities</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Life at PetSmart -->
+<div class="row align-items-center">
+  <div class="col-md-6 mb-3">
+    <h5 class="fw-bold">10 Reasons to Love #LifeAtPetSmart</h5>
+    <p>
+      Since 2020, we’ve committed over $250 million to increased wages and benefits to help ensure 
+      the health, safety, and well-being of associates. Our associates belong to PetSmart because 
+      they love pets, and we want them to stay because they feel a deep sense of belonging and 
+      support in building a future for themselves here.
+    </p>
+    <p>
+      Here are just ten reasons why #LifeAtPetSmart is so doggone great!
+    </p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% static 'images/prod14.png' %}" class="img-fluid rounded shadow" alt="Life at PetSmart">
+  </div>
+</div>
+
+{% endblock %}

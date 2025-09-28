@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PetPalooza</title>
+  {% block title %}{% endblock %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- Top Contact Bar -->
+<div class="bg-light text-dark py-1 px-3 d-flex justify-content-between small">
+  <div>
+    <i class="bi bi-telephone"></i> +91-1234567890
+    &nbsp; | &nbsp;
+    <i class="bi bi-envelope"></i> support@petpalooza.com
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="PetPalooza" height="40" class="me-2">
+      PetPalooza
+    </a>
+
+    <form class="d-flex mx-3 flex-grow-1" role="search">
+      <input class="form-control rounded-pill" type="search" placeholder="Search for products" aria-label="Search">
+    </form>
+
+    <div>
+      <a href="{% url 'home' %}" class="nav-link d-inline text-warning">Home</a>
+      <a href="{% url 'about' %}" class="nav-link d-inline text-white">About</a>
+      <a href="{% url 'contact' %}" class="nav-link d-inline text-white">Contact</a>
+      <a href="{% url 'login' %}" class="nav-link d-inline text-white">Log In</a>
+      <a href="{% url 'cart' %}" class="nav-link d-inline text-white">
+        Cart <span class="badge bg-warning text-dark">1</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Sub Navigation -->
+<div class="bg-primary text-white small py-2">
+  <div class="container d-flex gap-3">
+    <a href="{% url 'dog' %}" class="text-white text-decoration-none">Dog</a>
+    <a href="{% url 'cat' %}" class="text-white text-decoration-none">Cat</a>
+    <a href="{% url 'small_pets' %}" class="text-white text-decoration-none">Small Pets</a>
+    <a href="{% url 'pet_service' %}" class="text-white text-decoration-none">Pet Service</a>
+    <a href="{% url 'shop_by_brand' %}" class="text-white text-decoration-none">Shop by Brand</a>
+    <a href="{% url 'shop_by_breed' %}" class="text-white text-decoration-none">Shop by Breed</a>
+    <a href="{% url 'consult_vet' %}" class="text-white text-decoration-none">Consult a Vet</a>
+  </div>
+</div>
+
+
+<!-- Main Content -->
+<div class="container my-4">
+  {% block content %}
+  {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer class="bg-primary text-white pt-4">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <h5>PetPalooza</h5>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'about' %}" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="{% url 'shop' %}" class="text-white text-decoration-none">Shop</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Categories</h5>
+        <ul class="list-unstyled">
+          <li>Dog</li>
+          <li>Cat</li>
+          <li>Fish</li>
+          <li>Rats</li>
+          <li>Rabbits</li>
+          <li>Hamsters</li>
+          <li>Guinea Pigs</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Support</h5>
+        <ul class="list-unstyled">
+          <li>Privacy Policy</li>
+          <li>Refund & Returns Policy</li>
+          <li>Shipping Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Follow</h5>
+        <p>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+        </p>
+        <p><b>Get in Touch</b><br>
+          +91-1234567890<br>
+          support@petpalooza.com
+        </p>
+        <form>
+          <input type="email" class="form-control mb-2" placeholder="Email">
+          <button class="btn btn-light w-100">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="text-center py-3 bg-dark mt-4 small">© 2025 PetPalooza</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
